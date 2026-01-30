@@ -81,9 +81,9 @@ const reviewRouter = require("./routes/reviews.js");
 const userRouter = require("./routes/user.js");
 const messageRoutes = require("./routes/messages.js");
 
-// app.get("/", (req, res) => {
-//     res.send("Hi, I am root");
-// });
+app.get("/", (req, res) => {
+    res.redirect("/listings");
+});
 
 app.use("/listings", listingRouter);
 app.use("/listings/:id/reviews", reviewRouter);
