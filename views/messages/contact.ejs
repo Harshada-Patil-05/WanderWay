@@ -1,0 +1,54 @@
+<% layout("/layouts/boilerplate") %>
+
+<div class="container my-5">
+  <div class="row justify-content-center">
+    <div class="col-lg-6 col-md-8 col-12">
+
+      <div class="card shadow-sm p-4">
+
+        <!-- HOST INFO -->
+        <div class="d-flex align-items-center gap-3 mb-3">
+          <img
+            src="https://ui-avatars.com/api/?name=<%= host.username %>&background=E83E8C&color=fff"
+            class="rounded-circle"
+            width="60"
+            height="60"
+            alt="Host Avatar"
+          >
+
+          <div>
+            <h5 class="mb-0"><%= host.username %></h5>
+            <small class="text-muted">Verified Host</small>
+          </div>
+        </div>
+
+        <hr>
+
+        <!-- MESSAGE FORM -->
+        <form action="/users/<%= host._id %>/contact" method="POST">
+
+          <input type="hidden" name="listingId" value="<%= listingId %>">
+
+          <label class="form-label fw-semibold">
+            Message to host
+          </label>
+
+          <textarea
+            name="message"
+            rows="3"
+            class="form-control mb-3"
+            placeholder="Hi! I’m interested in your place. Is it available?"
+            required>
+          </textarea>
+
+          <button class="btn btn-dark btn-sm w-100">
+            Send Message
+          </button>
+
+        </form>
+
+      </div>
+
+    </div>
+  </div>
+</div>

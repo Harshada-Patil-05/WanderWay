@@ -1,0 +1,101 @@
+<style>
+  .search-btn {
+    background-color: #fe424d;
+    color: white;
+    border-radius: 25px;
+    padding: 0 1rem 0 1rem;
+  }
+
+  .search-btn:hover {
+    background-color: #fe424d;
+    color: white;
+  }
+
+  .search-btn i {
+    display: inline;
+  }
+
+  .search-input {
+    border-radius: 25px;
+    font-size: 1rem;
+    padding-left: 2rem;
+  }
+
+  @media (max-width: 950px) {
+    .search-btn {
+      padding: 0.45rem 0.6rem;
+    }
+  }
+</style>
+
+<nav class="navbar navbar-expand-md bg-body-light border-bottom sticky-top">
+  <div class="container-fluid d-flex align-items-center">
+
+    <!-- LEFT: Brand + Explore (ALWAYS visible) -->
+    <div class="d-flex align-items-center">
+      <a class="navbar-brand" href="/listings">
+        <i class="fa-regular fa-compass"></i>
+      </a>
+
+      <a href="/listings" class="nav-link">Explore</a>
+    </div>
+
+    <div class="navbar-nav ms-auto align-items-center">
+
+      <!-- DESKTOP SEARCH (unchanged) -->
+      <form class="d-none d-md-flex" role="search" action="/listings" method="GET">
+        <input class="form-control search-input me-2" type="search"   name="search" placeholder="Search destinations" />
+        <button class="btn search-btn d-flex align-items-center" type="submit">
+          <i class="fa-solid fa-magnifying-glass"></i>
+          <span class="search-text">Search</span>
+        </button>
+      </form>
+
+      <!-- MOBILE + TABLET SEARCH ICON -->
+      <form class="d-flex d-md-none ms-2" role="search" action="/listings" method="GET">
+        <input class="form-control search-input" type="search"   name="search" placeholder="Search" style="width: 115px;" />
+      </form>
+
+
+    </div>
+
+    <!-- RIGHT: Desktop links -->
+    <div class="d-none d-md-flex ms-auto align-items-center gap-4">
+      <a href="/listings/new" class="nav-link">Host on WanderWay</a>
+
+      <% if(!currUser) { %>
+        <a href="/login" class="nav-link" style="font-weight: 800;">Login</a>
+        <a href="/signup" class="nav-link" style="font-weight: 800;">Sign up</a>
+        <% } %>
+
+          <% if(currUser) { %>
+            <a href="/logout" class="nav-link fw-bold " style="font-weight: 800;">Logout</a>
+            <% } %>
+    </div>
+
+    <!-- MOBILE MENU (only right-side links) -->
+    <div class="dropdown ms-auto d-md-none">
+      <button class="btn btn-outline-secondary rounded-pill px-3" type="button" data-bs-toggle="dropdown"
+        aria-expanded="false">
+        <i class="bi bi-list fs-5"></i>
+      </button>
+
+      <ul class="dropdown-menu dropdown-menu-end shadow-lg mt-2">
+        <li><a class="dropdown-item" href="/listings/new">Airbnb your home</a></li>
+        <li>
+          <hr class="dropdown-divider">
+        </li>
+
+        <% if(!currUser) { %>
+          <li><a class="dropdown-item" href="/login" style="font-weight: 800;">Login</a></li>
+          <li><a class="dropdown-item" href="/signup" style="font-weight: 800;">Sign up</a></li>
+          <% } %>
+
+            <% if(currUser) { %>
+              <li><a class="dropdown-item" href="/logout" style="font-weight: 800;">Logout</a></li>
+              <% } %>
+      </ul>
+    </div>
+
+  </div>
+</nav>

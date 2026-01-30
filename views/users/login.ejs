@@ -1,0 +1,38 @@
+<% layout("/layouts/boilerplate") %>
+
+    <div class="row mt-3">
+        <h1 class="col-6 offset-3 text-center fw-bold">
+            Welcome back 👋
+        </h1>
+        <p class="col-6 offset-3 text-center text-muted">
+            Log in to continue your journey on WanderWay
+        </p>
+
+        <div class="col-6 offset-3 mt-5">
+            <form action="/login" method="POST" class="needs-validation" novalidate>
+                <div class="mb-3">
+                    <label for="username" class="form-label">Username</label>
+                    <input name="username" id="username" type="text" class="form-control" required>
+                    <div class="invalid-feedback">
+                        Username is required
+                    </div>
+                </div>
+
+                <div class="mb-3">
+                    <label for="password" class="form-label">Password</label>
+                    <input name="password" id="password" type="password" class="form-control" required
+                        onmousedown="this.type='text'" onmouseup="this.type='password'"
+                        onmouseleave="this.type='password'">
+                    <div class="invalid-feedback">
+                        Password is required
+                    </div>
+                </div>
+                <button type="submit" class="btn btn-success">Login</button>
+                <p class="text-center mt-3">
+                    New to WanderWay?
+                    <a href="/signup">Create an account</a>
+                </p>
+
+            </form>
+        </div>
+    </div>

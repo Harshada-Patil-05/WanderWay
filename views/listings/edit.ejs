@@ -1,0 +1,134 @@
+<% layout("/layouts/boilerplate") %>
+
+    <body>
+        <div class="row">
+            <div class="col-8 offset-2">
+                <br>
+                <h3 class="fw-bold text-center">
+                    Refine Your Space
+                </h3>
+                <p class="text-center text-muted">
+                    Make your place stand out with updated details
+                </p>
+
+                <br>
+                <form method="POST" action="/listings/<%= listing._id%>?_method=PUT" novalidate class="needs-validation" enctype="multipart/form-data">
+                    <div class="mb-3">
+                        <label for="title" class="form-label">Title</label>
+                        <input name="listing[title]" value="<%= listing.title %>" type="text" class="form-control" required>
+                        <div class="invalid-feedback">
+                            Title is required
+                        </div>
+                    </div>
+                    <div class="mb-3">
+                        <label for="description" class="form-label">Description</label>
+                        <textarea name="listing[description]" class="form-control" required><%= listing.description %></textarea>
+                        <div class="invalid-feedback">
+                                Please enter a short description
+                        </div>
+                    </div>
+                    <div class="mb-3">
+                        Original Listing Image <br>
+                        <img src="<%= listing.image.url %>" class="img-preview mt-3"alt="Listing image preview">
+                    </div>
+                    <div class="mb-3">
+                        <label for="image" class="form-label">Upload New Image</label>
+                        <input name="listing[image]" type="file"
+                            class="form-control" >
+                    </div>
+                    <div class="row">
+                        <div class="mb-3 col-md-4">
+                            <label for="price" class="form-label">Price</label>
+                            <input name="listing[price]" value="<%= listing.price %>" type="number"
+                                class="form-control" required>
+                            <div class="invalid-feedback">
+                                Price should be valid
+                            </div>
+                        </div>
+                        <div class="mb-3 col-md-8">
+                            <label for="country" class="form-label">Country</label>
+                            <input name="listing[country]" value="<%= listing.country %>" type="text"
+                                class="form-control" required>
+                        </div>
+                        <div class="invalid-feedback">
+                                Country name should be valid
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="mb-3 col-md-4">
+                            <label for="location" class="form-label">Location</label>
+                            <input name="listing[location]" value="<%= listing.location %>" type="text"
+                            class="form-control" required>
+                            <div class="invalid-feedback">
+                                Location should be valid
+                            </div>
+                        </div>
+                        <div class="mb-3 col-md-8">
+                                    <label class="form-label">Category</label>
+                                    <select class="form-select" name="listing[category]" required>
+                                        <option value="" disabled>Select category</option>
+
+                                        <% const categories = [
+                                            "Trending",
+                                            "Rooms",
+                                            "Iconic Cities",
+                                            "Mountains",
+                                            "Castles",
+                                            "Heritage",
+                                            "Amazing Pools",
+                                            "Camping",
+                                            "Farms",
+                                            "Beach",
+                                            "Luxury Villa"
+                                        ]; %>
+
+                                        <% categories.forEach(cat => { %>
+                                            <option value="<%= cat %>"
+                                                <%= listing.category === cat ? "selected" : "" %>>
+                                                <%= cat %>
+                                            </option>
+                                        <% }) %>
+                                    </select>
+                        </div>
+                    </div>
+                    <div class="mb-4">
+                        <label class="form-label">Amenities</label>
+
+                        <div class="row g-2">
+                            <% const amenitiesList = [
+                            "WiFi","Kitchen","Free Parking","Air Conditioning","Heating",
+                            "Power Backup","Hot Water","Washing Machine","Iron","Hair Dryer",
+                            "TV","Dedicated Workspace","Balcony","Garden","Swimming Pool",
+                            "Gym","Elevator","Security Camera","Fire Extinguisher","First Aid Kit"
+                            ]; %>
+
+                            <% amenitiesList.forEach(amenity => { %>
+                            <div class="col-md-4 col-sm-6">
+                                <div class="form-check">
+                                <input
+                                    class="form-check-input"
+                                    type="checkbox"
+                                    name="listing[amenities][]"
+                                    value="<%= amenity %>"
+                                    id="<%= amenity.replace(/\s/g,'') %>"
+                                    <%= listing.amenities.includes(amenity) ? "checked" : "" %>
+                                >
+                                <label
+                                    class="form-check-label"
+                                    for="<%= amenity.replace(/\s/g,'') %>"
+                                >
+                                    <%= amenity %>
+                                </label>
+                                </div>
+                            </div>
+                            <% }) %>
+                        </div>
+                    </div>
+
+                    <br>
+                    <button type="submit" class="btn btn-dark add">Edit</button>
+                    <br><br><br>
+                </form>
+            </div>
+        </div>
+    </body>

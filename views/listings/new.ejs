@@ -1,0 +1,135 @@
+<% layout("/layouts/boilerplate") %>
+
+    <div class="row">
+        <div class="col-8 offset-2">
+            <br>
+            <h3 class="fw-bold text-center">
+                Host your place on WanderWay 🏡
+            </h3>
+            <p class="text-center text-muted">
+                Share your space with travelers around the world
+            </p>
+            <br>
+            <form method="POST" action="/listings" novalidate class="needs-validation" enctype="multipart/form-data">
+
+                <!-- Title -->
+                <div class="mb-3">
+                    <label class="form-label">Title</label>
+                    <input name="listing[title]" placeholder="Add a catchy title" type="text" class="form-control"
+                        required>
+                    <div class="invalid-feedback">Title is required</div>
+                </div>
+
+                <!-- Description -->
+                <div class="mb-3">
+                    <label class="form-label">Description</label>
+                    <textarea name="listing[description]" class="form-control" rows="3" required></textarea>
+                    <div class="invalid-feedback">
+                        Please enter a short description
+                    </div>
+                </div>
+
+                <!-- Image -->
+                <div class="mb-3">
+                    <label class="form-label">Upload Listing Image</label>
+                    <input name="listing[image]" type="file" class="form-control" required>
+                </div>
+
+                <!-- Price & Country -->
+                <div class="row">
+                    <div class="mb-3 col-md-4">
+                        <label class="form-label">Price (₹ / night)</label>
+                        <input name="listing[price]" placeholder="1200" class="form-control" required>
+                        <div class="invalid-feedback">
+                            Price should be valid
+                        </div>
+                    </div>
+
+                    <div class="mb-3 col-md-8">
+                        <label class="form-label">Country</label>
+                        <input name="listing[country]" placeholder="India" type="text" class="form-control" required>
+                        <div class="invalid-feedback">
+                            Country name should be valid
+                        </div> 
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="mb-3 col-md-4">
+                        <label class="form-label">Location</label>
+                        <input name="listing[location]" placeholder="Pune, Maharashtra" type="text" class="form-control"
+                            required>
+                        <div class="invalid-feedback">
+                            Location should be valid
+                        </div>
+                    </div>
+
+                    <div class="mb-3 col-md-8">
+                    <label class="form-label">Category</label>
+                    <select class="form-select" name="listing[category]" required>
+                        <option value="" disabled selected>Select category</option>
+                        <option>Trending</option>
+                        <option>Rooms</option>
+                        <option>Iconic Cities</option>
+                        <option>Mountains</option>
+                        <option>Castles</option>
+                        <option>Heritage</option>
+                        <option>Amazing Pools</option>
+                        <option>Camping</option>
+                        <option>Farms</option>
+                        <option>Beach</option>
+                        <option>Luxury Villa</option>
+                    </select>
+                    </div>
+                </div>
+                
+                <!-- ✅ AMENITIES SECTION -->
+                <div class="mb-4">
+                    <label class="form-label">Amenities (select at least 10)</label>
+
+                    <div class="row g-2" id="amenities-box">
+                        <% const amenitiesList = [
+                        "WiFi","Kitchen","Free Parking","Air Conditioning","Heating",
+                        "Power Backup","Hot Water","Washing Machine","Iron","Hair Dryer",
+                        "TV","Dedicated Workspace","Balcony","Garden","Swimming Pool",
+                        "Gym","Elevator","Security Camera","Fire Extinguisher","First Aid Kit"
+                        ]; %>
+
+                        <% amenitiesList.forEach(amenity => { %>
+                        <div class="col-md-4 col-sm-6">
+                            <div class="form-check">
+                                <input
+                                    class="form-check-input amenity-checkbox"
+                                    type="checkbox"
+                                    name="listing[amenities][]"
+                                    value="<%= amenity %>"
+                                    id="<%= amenity.replace(/\s/g,'') %>"
+                                >
+                                <label class="form-check-label" for="<%= amenity.replace(/\s/g,'') %>">
+                                    <%= amenity %>
+                                </label>
+                            </div>
+                    </div>
+                    <% }) %>
+                    </div>
+                        <!-- Bootstrap-style error -->
+                    <% if (errorMsg && errorMsg.length) { %>
+                    <div class="invalid-feedback d-block">
+                         <%= errorMsg[0] %>
+                     </div>
+                    <% } %>
+
+                </div>
+
+                 <hr>
+                <!-- Submit -->
+                <br>
+                <button type="submit" class="btn btn-dark add">
+                    Add Listing
+                </button>
+
+                <br><br><br>
+            </form>
+        </div>
+    </div>
+
