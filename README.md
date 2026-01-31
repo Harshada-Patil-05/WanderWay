@@ -1,6 +1,12 @@
-<img src="public/images/favicon.svg" alt="WanderWay Logo" width="80">
+<p align="center">
+  <img src="public/images/favicon.svg" width="80">
+</p>
 
-# WanderWay
+<h1 align="center">WanderWay</h1>
+
+<p align="center">
+  A full-stack web application to explore, list, and review unique stays.
+</p>
 
 WanderWay is a full-stack web application that allows users to explore, list, and review unique stays using a clean and responsive interface.
 
