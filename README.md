@@ -8,6 +8,7 @@ WanderWay is a full-stack web application that allows users to explore, list, an
 ## About the Project
 WanderWay is a full-stack accommodation listing platform developed to gain hands-on experience with real-world web development.
 The project focuses on backend architecture, authentication, database relationships, cloud-based image storage, and deployment, while also maintaining a responsive and user-friendly UI.
+This project was built to understand how production-level full-stack applications handle authentication, data relationships, image storage, and deployment.
 
 ## Features
 - User authentication and authorization
@@ -49,4 +50,17 @@ The project focuses on backend architecture, authentication, database relationsh
 - 💬 [Message Host](screenshots/Message_Host.png)
 - 🔐 [Login Page](screenshots/Login.png)
 - 📝 [Sign Up Page](screenshots/SignUp.png)
+
+## 👤 Author
+**Harshada Gulabrao Patil**  
+Full-Stack Web Developer  
+
+🔗 LinkedIn: [harshada-g-patil](https://www.linkedin.com/in/harshada-g-patil/)  
+📧 Email: harshupatil0405@gmail.com
+
+
+## Disclaimer
+WanderWay is an independent project created for educational purposes.  
+It is inspired by modern accommodation platforms but does not copy or reuse any proprietary design, code, or data.
+
 
