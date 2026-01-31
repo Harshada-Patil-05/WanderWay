@@ -1,5 +1,4 @@
 <img src="public/images/favicon.svg" alt="WanderWay Logo" width="80">
-
 # WanderWay
 
 
