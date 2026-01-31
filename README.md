@@ -1,16 +1,16 @@
  # WanderWay 
 WanderWay is a full-stack web application that allows users to explore, list, and review unique stays using a clean and responsive interface.
 
-## Live Demo
+## 🚀 Live Demo
 🔗 https://wanderway-a753.onrender.com
 ⚠️ Note: The application is deployed on a free Render instance, so the first load may take 1–2 minutes due to server cold start.
 
-## About the Project
+## 📖 About the Project
 WanderWay is a full-stack accommodation listing platform developed to gain hands-on experience with real-world web development.
 The project focuses on backend architecture, authentication, database relationships, cloud-based image storage, and deployment, while also maintaining a responsive and user-friendly UI.
 This project was built to understand how production-level full-stack applications handle authentication, data relationships, image storage, and deployment.
 
-## Features
+## ✨ Features
 - User authentication and authorization
 - Create, edit, and delete property listings
 - Upload and manage images using Cloudinary
@@ -20,7 +20,7 @@ This project was built to understand how production-level full-stack application
 - Server-side validation using Joi
 - RESTful routing and MVC architecture
 
-## Tech Stack
+## 🛠️ Tech Stack
 ### Frontend
 - EJS (Embedded JavaScript Templates)
 - Bootstrap 5
@@ -59,7 +59,7 @@ Full-Stack Web Developer
 📧 Email: harshupatil0405@gmail.com
 
 
-## Disclaimer
+## ⚠️ Disclaimer
 WanderWay is an independent project created for educational purposes.  
 It is inspired by modern accommodation platforms but does not copy or reuse any proprietary design, code, or data.
 
