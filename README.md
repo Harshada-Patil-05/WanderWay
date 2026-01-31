@@ -40,47 +40,13 @@ The project focuses on backend architecture, authentication, database relationsh
 - dotenv (Environment Variables)
 
 ## 📸 Screenshots
-📱 Screenshots are captured in tablet/mobile view to highlight the responsive design.
 
-### 🏠 Home Page
-<p align="center">
-  <img src="screenshots/Home.png" width="450">
-</p>
+- 🏠 [Home Page](screenshots/Home.png)
+- 📋 [Listing Details – View 1](screenshots/Show_listing1.png)
+- 📋 [Listing Details – View 2](screenshots/Show_listing2.png)
+- ✍️ [Create Listing](screenshots/Create_listing.png)
+- ✏️ [Edit Listing](screenshots/Edit_listing.png)
+- 💬 [Message Host](screenshots/Message_Host.png)
+- 🔐 [Login Page](screenshots/Login.png)
+- 📝 [Sign Up Page](screenshots/SignUp.png)
 
----
-
-### 📋 Listing Details
-<p align="center">
-  <img src="screenshots/Show_listing1.png" height="450">
-  <img src="screenshots/Show_listing2.png" height="450">
-</p>
-
-
----
-
-### ✍️ Create Listing
-<p align="center">
-  <img src="screenshots/Create_listing.png" width="450">
-</p>
-
----
-
-### 💬 Message Host
-<p align="center">
-  <img src="screenshots/Message_Host.png" width="450">
-</p>
-
----
-
-### 🔐 Authentication (Reference)
-<p align="center">
-  <img src="screenshots/Login.png" width="320">
-  <img src="screenshots/SignUp.png" width="320">
-</p>
-
----
-
-### ✏️ Edit Listing (Reference)
-<p align="center">
-  <img src="screenshots/Edit_listing.png" width="320">
-</p>
