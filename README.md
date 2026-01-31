@@ -51,9 +51,10 @@ The project focuses on backend architecture, authentication, database relationsh
 
 ### 📋 Listing Details
 <p align="center">
-  <img src="screenshots/Show_listing1.png" width="450">
- <img src="screenshots/Show_listing2.png" width="450">
+  <img src="screenshots/Show_listing1.png" height="450">
+  <img src="screenshots/Show_listing2.png" height="450">
 </p>
+
 
 ---
 
