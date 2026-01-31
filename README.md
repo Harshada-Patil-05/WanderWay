@@ -55,7 +55,7 @@ This project was built to understand how production-level full-stack application
 **Harshada Gulabrao Patil**  
 Full-Stack Web Developer  
 
-🔗 LinkedIn: [harshada-g-patil](https://www.linkedin.com/in/harshada-g-patil/)  
+🔗 LinkedIn: [Harshada_Patil](https://www.linkedin.com/in/harshada-g-patil/)  
 📧 Email: harshupatil0405@gmail.com
 
 
