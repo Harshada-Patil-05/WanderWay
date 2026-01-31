@@ -4,7 +4,7 @@
       <img src="public/images/favicon.svg" alt="WanderWay Logo" width="65">
     </td>
     <td>
-      <strong style="font-size:24px;">WanderWay</strong>
+      <h2 style="margin-bottom: 0;">WanderWay</h2>
     </td>
   </tr>
 </table>
