@@ -42,7 +42,9 @@ The project focuses on backend architecture, authentication, database relationsh
 ## Screenshots
 Screenshots are captured in tablet/mobile view to highlight the responsive design.
 ### 🏠 Home Page
-![Home Page](screenshots/Home.png)
+<p align="center">
+  <img src="screenshots/Home.png" width="500">
+</p>
 
 ### 🔐 Authentication
 #### Login Page
